@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Music App</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Icons (Font Awesome) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!-- Sidebar -->
+<div class="sidebar">
+  <nav>
+    <a href="#" id="nav-home"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="#" id="nav-radio"><i class="fas fa-broadcast-tower"></i><span>Radio</span></a>
+    <a href="#" id="nav-podcast"><i class="fas fa-podcast"></i><span>Podcast</span></a>
+    <a href="#" id="nav-explore"><i class="fas fa-compass"></i><span>Explore</span></a>
+    <a href="#" id="nav-library"><i class="fas fa-music"></i><span>Library</span></a>
+  </nav>
+</div>
+  <!-- App Wrapper -->
+  <div class="app-wrapper" id="app-wrapper">
+
+    <!-- Header (fixed) -->
+    <header class="app-header" id="app-header">
+      <div class="logo" id="logo">My Music</div>
+
+      <div class="header-icons" id="header-icons">
+        <i class="fas fa-search nav-icon" id="search-toggle" data-tooltip="Search" aria-label="Search"></i>
+        <i class="fas fa-bell nav-icon" id="notif-toggle" data-tooltip="Notifications" aria-label="Notifications"></i>
+        <a href="user.html" id="user-link" aria-label="User / Settings">
+          <i class="fas fa-user nav-icon" id="user-btn" data-tooltip="User"></i>
+        </a>
+      </div>
+
+      <!-- Search input (hidden by default) -->
+      <div class="search-box hidden" id="search-box">
+        <input id="search-input" type="text" placeholder="Search music, artists..." />
+      </div>
+
+      <!-- Notifications panel (hidden by default) -->
+      <div class="notif-box hidden" id="notif-box">
+        <p>No new notifications</p>
+      </div>
+    </header>
+
+    <!-- Main content wrapper (sections go here) -->
+    <main id="main-content">
+      <div class="sections-wrapper" id="sections-wrapper">
+        <!-- Recently Played Section -->
+<section class="section" id="recently-played">
+  <div class="section-header">
+    <h2>Recently Played</h2>
+  </div>
+
+  <div class="card-wrapper">
+    <!-- Arrows -->
+    <button class="arrow left" id="recent-left">&#10094;</button>
+    <button class="arrow right" id="recent-right">&#10095;</button>
+
+    <!-- Cards -->
+    <div class="card-container" id="recent-cards">
+      <img class="card" src="images/recent.png" alt="">
+      <img class="card" src="images/recent.png" alt="">
+      <img class="card" src="images/recent.png" alt="">
+      <img class="card" src="images/recent.png" alt="">
+      <img class="card" src="images/recent.png" alt="">
+      <img class="card" src="images/recent.png" alt="">
+      <img class="card" src="images/recent.png" alt="">
+      <img class="card" src="images/recent.png" alt="">
+      <img class="card" src="images/recent.png" alt="">
+      <img class="card" src="images/recent.png" alt="">
+    </div>
+  </div>
+</section>
+<!-- Made For You Section -->
+<section class="section" id="made-for-you">
+  <div class="section-header">
+    <h2>Made For You</h2>
+  </div>
+
+  <div class="card-wrapper">
+    <!-- Arrows -->
+    <button class="arrow left" id="made-left">&#10094;</button>
+    <button class="arrow right" id="made-right">&#10095;</button>
+
+    <!-- Cards -->
+    <div class="card-container" id="made-cards">
+      <img class="card normal" src="images/made-for-you.png" alt="">
+      <img class="card normal" src="images/made-for-you.png" alt="">
+      <img class="card normal" src="images/made-for-you.png" alt="">
+     <img class="card normal" src="images/made-for-you.png" alt="">
+      <img class="card normal" src="images/made-for-you.png" alt="">
+      <img class="card normal" src="images/made-for-you.png" alt="">
+      <img class="card normal" src="images/made-for-you.png" alt="">
+      <img class="card normal" src="images/made-for-you.png" alt="">
+      <img class="card normal" src="images/made-for-you.png" alt="">
+      <img class="card normal" src="images/made-for-you.png" alt="">
+    </div>
+  </div>
+</section>
+<!-- Top Mix Section -->
+<section class="section" id="top-mix">
+  <div class="section-header">
+    <h2>Top Mix</h2>
+  </div>
+
+  <div class="card-wrapper">
+    <!-- Arrows -->
+    <button class="arrow left" id="mix-left">&#10094;</button>
+    <button class="arrow right" id="mix-right">&#10095;</button>
+
+    <!-- Cards -->
+    <div class="card-container" id="mix-cards">
+      <img class="card round" src="images/top-mix.png" alt="">
+      <img class="card round" src="images/top-mix.png" alt="">
+      <img class="card round" src="images/top-mix.png" alt="">
+      <img class="card round" src="images/top-mix.png" alt="">
+      <img class="card round" src="images/top-mix.png" alt="">
+      <img class="card round" src="images/top-mix.png" alt="">
+      <img class="card round" src="images/top-mix.png" alt="">
+      <img class="card round" src="images/top-mix.png" alt="">
+      <img class="card round" src="images/top-mix.png" alt="">
+      <img class="card round" src="images/top-mix.png" alt="">
+    </div>
+  </div>
+</section>
+<!-- New Arrival Section -->
+<section class="section" id="new-arrival">
+  <div class="section-header">
+    <h2>New Arrival</h2>
+  </div>
+
+  <div class="card-wrapper">
+    <!-- Arrows -->
+    <button class="arrow left" id="arrival-left">&#10094;</button>
+    <button class="arrow right" id="arrival-right">&#10095;</button>
+
+    <!-- Cards -->
+    <div class="card-container" id="arrival-cards">
+      <img class="card" src="images/new-arrivals.png" alt="">
+      <img class="card" src="images/new-arrivals.png" alt="">
+      <img class="card" src="images/new-arrivals.png" alt="">
+      <img class="card" src="images/new-arrivals.png" alt="">
+      <img class="card" src="images/new-arrivals.png" alt="">
+      <img class="card" src="images/new-arrivals.png" alt="">
+      <img class="card" src="images/new-arrivals.png" alt="">
+      <img class="card" src="images/new-arrivals.png" alt="">
+      <img class="card" src="images/new-arrivals.png" alt="">
+      <img class="card" src="images/new-arrivals.png" alt="">
+      <img class="card" src="images/new-arrivals.png" alt="">
+      <img class="card" src="images/new-arrivals.png" alt="">
+    </div>
+  </div>
+</section>
+<!-- Best of Artists Section -->
+<section class="section" id="best-artists">
+  <div class="section-header">
+    <h2>Best of Artists</h2>
+  </div>
+
+  <div class="card-wrapper">
+    <!-- Arrows -->
+    <button class="arrow left" id="artists-left">&#10094;</button>
+    <button class="arrow right" id="artists-right">&#10095;</button>
+
+    <!-- Cards -->
+    <div class="card-container" id="artists-cards">
+      <div class="card">Artist 1</div>
+      <div class="card">Artist 2</div>
+      <div class="card">Artist 3</div>
+      <div class="card">Artist 4</div>
+      <div class="card">Artist 5</div>
+      <div class="card">Artist 6</div>
+      <div class="card">Artist 7</div>
+      <div class="card">Artist 8</div>
+      <div class="card">Artist 9</div>
+      <div class="card">Artist 10</div>
+    </div>
+  </div>
+</section>
+<!-- Trending Section -->
+<section class="section" id="trending">
+  <div class="section-header">
+    <h2>Trending</h2>
+  </div>
+
+  <div class="card-wrapper">
+    <!-- Arrows -->
+    <button class="arrow left" id="trending-left">&#10094;</button>
+    <button class="arrow right" id="trending-right">&#10095;</button>
+
+    <!-- Cards -->
+    <div class="card-container" id="trending-cards">
+      <div class="reel-card">Trending 1</div>
+      <div class="reel-card">Trending 2</div>
+      <div class="reel-card">Trending 3</div>
+      <div class="reel-card">Trending 4</div>
+      <div class="reel-card">Trending 5</div>
+      <div class="reel-card">Trending 6</div>
+      <div class="reel-card">Trending 7</div>
+      <div class="reel-card">Trending 8</div>
+    </div>
+  </div>
+</section>
+<!-- Artists Section -->
+<section class="section" id="artists">
+  <div class="section-header">
+    <h2>Artists</h2>
+  </div>
+
+  <div class="card-wrapper">
+    <!-- Arrows -->
+    <button class="arrow left" id="artists-left">&#10094;</button>
+    <button class="arrow right" id="artists-right">&#10095;</button>
+
+    <!-- Cards -->
+    <div class="card-container" id="artists-cards">
+      <div class="artist-card">A1</div>
+      <div class="artist-card">A2</div>
+      <div class="artist-card">A3</div>
+      <div class="artist-card">A4</div>
+      <div class="artist-card">A5</div>
+      <div class="artist-card">A6</div>
+      <div class="artist-card">A7</div>
+      <div class="artist-card">A8</div>
+    </div>
+  </div>
+</section>
+      </div>
+    </main>
+  </div>
+  <!-- /App Wrapper -->
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
